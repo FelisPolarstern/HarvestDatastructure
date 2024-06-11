@@ -1,3 +1,5 @@
+package GameClasses;
+
 public enum PlantType {
     APPLETREE("AppleTree", 6 ,0.25, 200, 10, 75), //Apfelbaum
     CHERRYTREE("CherryTree", 5, 0.25, 500, 50, 75), //Kirschbaum

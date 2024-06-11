@@ -1,3 +1,5 @@
+package GameClasses;
+
 public enum Tool {
     WATERINGCAN("Wateringcan", 20.0),
     FERTILISER("Fertiliser", 5.00);
@@ -9,7 +11,7 @@ public enum Tool {
         this.toolType = toolType;
         this.toolCost = toolCost;
     }
-    public double getToolCost(){
+    protected double getToolCost(){
         return this.toolCost;
     }
 

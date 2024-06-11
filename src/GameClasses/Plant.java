@@ -1,10 +1,12 @@
-public class Plant {
-    PlantType type;
-    double growthState;
-    boolean fertilised;
-    boolean watered;
+package GameClasses;
 
-    public Plant(String type){
+public class Plant {
+    private PlantType type;
+    private double growthState;
+    private boolean fertilised;
+    private boolean watered;
+
+    protected Plant(String type){
         String checkedType = matchString(type);
         if(checkedType.equals("false")){
             System.out.println("This is not a valid planttype. Valid planttypes are: AppleTree, CherryTree, Spinach, Onion, Mache, Pea or Potato.");
@@ -24,7 +26,7 @@ public class Plant {
         this.watered = false;
     }
 
-    private String matchString(String type){
+    protected String matchString(String type){
         if(type.equalsIgnoreCase("AppleTree")){
             return "AppleTree";
         }
@@ -49,19 +51,19 @@ public class Plant {
         return "false";
     }
 
-    public void waterPlant(){
+    protected void waterPlant(){
         this.watered = true;
     }
 
-    public void fertilisePlant(){
+    protected void fertilisePlant(){
         this.fertilised = true;
     }
 
-    public PlantType getPlantType(){
+    protected PlantType getPlantType(){
         return this.type;
     }
 
-    public String plantTypeToString(){
+    protected String plantTypeToString(){
         return this.type.getType();
     }
 }

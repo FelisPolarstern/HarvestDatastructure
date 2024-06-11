@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2912a184-ad1d-4700-9122-6cce4cd5e3e6" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameClasses/Farm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameClasses/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameClasses/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Farmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlantType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/PlantType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Tool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,19 +38,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -64,7 +75,10 @@
       <option name="presentableId" value="Default" />
       <updated>1717665694158</updated>
       <workItem from="1717665695343" duration="53252000" />
-      <workItem from="1717949377743" duration="604000" />
+      <workItem from="1717949377743" duration="1275000" />
+      <workItem from="1718118696980" duration="39000" />
+      <workItem from="1718133411977" duration="1000" />
+      <workItem from="1718133441560" duration="2209000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1717794677525</created>
@@ -73,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717794677526</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".">
+      <created>1718005086431</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718005086431</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
