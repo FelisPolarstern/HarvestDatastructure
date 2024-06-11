@@ -22,7 +22,7 @@ public class Game {
     public void shopping() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Du schaust in deine Goldbörse, du hast " + this.farm.getGold() + " G zur Verfügung.");
-        System.out.println("Guten Morgen " + this.farm.getFarmerName() + " möchtest du heute etwas kaufen?");
+        System.out.println("Guten Morgen " + this.farm.getFarmerName() + " möchtest du heute etwas kaufen? Ich verkaufe Werkzeuge und Pflanzensamen."); //ToDO buy a new field
         String wannaBuy = scanner.next();
         if (wannaBuy.equalsIgnoreCase("nein")) {
             System.out.println("Dann wünsche ich dir einen schönen Tag! Bis morgen früh!");
@@ -36,6 +36,13 @@ public class Game {
             switch (buy) {
                 case "werkzeug":
                     buyTools();
+                    break;
+                case "pflanzensamen":
+                    buySeeds();
+                    break;
+                default:
+                    System.out.println("Ich habe dich nicht verstanden, könntest du das wiederholen?");
+                    break;
             }
         }
         System.out.println("Möchtest du noch etwas kaufen?");
@@ -73,17 +80,26 @@ public class Game {
             if (hasFertilizer) {
                 System.out.println("Du hast schon Dünger du brauchst keinen weiteren!");
             }
-            System.out.println("Möchtest du eine Gießkanne kaufen? Das kostet " + Tool.WATERINGCAN.getToolCost() + "G.");
+            System.out.println("Möchtest du eine Dünger kaufen? Das kostet " + Tool.FERTILISER.getToolCost() + "G.");
             input = scanner.next();
             if (input.equalsIgnoreCase("Ja")) {
-                if (!this.farm.hasEnoughGold(Tool.WATERINGCAN.getToolCost())) {
+                if (!this.farm.hasEnoughGold(Tool.FERTILISER.getToolCost())) {
                     System.out.println("Dafür hast du nicht genug Gold!");
                 } else {
                     System.out.println("Vielen Dank für den Einkauf!");
-                    this.farm.buyWateringCan();
+                    this.farm.buyFertilizer();
                 }
             }
         }
+
+    }
+
+    private void buySeeds() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ich verkaufe folgende Samen: " + PlantType.PEA.getType() + ", " + PlantType.APPLETREE.getType() + ", " + PlantType.CHERRYTREE.getType() + ", " +
+                PlantType.MACHE.getType() + ", " + PlantType.ONION.getType() + ", " + PlantType.POTATO.getType() + ", " + PlantType.SPINACH.getType() + ".");
+        String input = scanner.next();
+        //Todo hier gehts weiter
 
     }
 
