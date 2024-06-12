@@ -6,21 +6,8 @@ public class Plant {
     private boolean fertilised;
     private boolean watered;
 
-    protected Plant(String type){
-        String checkedType = matchString(type);
-        if(checkedType.equals("false")){
-            System.out.println("This is not a valid planttype. Valid planttypes are: AppleTree, CherryTree, Spinach, Onion, Mache, Pea or Potato.");
-            return;
-        }
-        switch (checkedType) {
-            case "AppleTree" -> this.type = PlantType.APPLETREE;
-            case "CherryTree" -> this.type = PlantType.CHERRYTREE;
-            case "Spinach" -> this.type = PlantType.SPINACH;
-            case "Onion" -> this.type = PlantType.ONION;
-            case "Mache" -> this.type = PlantType.MACHE;
-            case "Pea" -> this.type = PlantType.PEA;
-            case "Potato" -> this.type = PlantType.POTATO;
-        }
+    protected Plant(PlantType plantType){
+        this.type = plantType;
         this.growthState = 0;
         this.fertilised = false;
         this.watered = false;
@@ -64,6 +51,6 @@ public class Plant {
     }
 
     protected String plantTypeToString(){
-        return this.type.getType();
+        return this.type.getName();
     }
 }
