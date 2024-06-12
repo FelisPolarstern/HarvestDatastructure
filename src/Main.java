@@ -1,5 +1,4 @@
 import GameClasses.Game;
-import GameClasses.PlantType;
 
 import java.util.Scanner;
 
@@ -72,14 +71,6 @@ public class Main {
                     break;
             }
         }
-
-
-        /*
-        Was möchtest du tun? -> Pflanzen, Gießen, Düngen, Ernent
-        Pflanzen-> Was pflanzen auswahl aus Inventar
-        Gießen -> hast du eine Gießkanne? Was gießen?
-        Düngen -> hast du Dünger? was Düngen?
-          */
         return currentGame;
     }
 
