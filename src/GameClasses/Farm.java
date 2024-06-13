@@ -19,7 +19,7 @@ public class Farm {
         this.farmer = new Farmer(farmer);
         this.name = name;
         this.fields = new ArrayList<Field>();
-        this.fields.add(new Field(4, 4));
+        this.fields.add(new Field(5, 5));
         this.gold = 200;
         this.tools = new ArrayList<>();
         this.seeds = new HashMap<>();

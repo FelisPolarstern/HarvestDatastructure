@@ -15,6 +15,11 @@ public class Plant {
         this.canBeHarvested = false;
     }
 
+    @Override
+    public String toString(){
+        return this.type.getName();
+    }
+
     protected String matchString(String type){
         if(type.equalsIgnoreCase("AppleTree")){
             return "AppleTree";
@@ -86,5 +91,9 @@ public class Plant {
             return true;
         }
         return false;
+    }
+
+    protected int getGrowthState(){
+        return (int) this.growthState;
     }
 }

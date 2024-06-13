@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2912a184-ad1d-4700-9122-6cce4cd5e3e6" name="Changes" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2912a184-ad1d-4700-9122-6cce4cd5e3e6" name="Changes" comment="Written all methods, needs bugfixing">
+      <change afterPath="$PROJECT_DIR$/src/GameClasses/GameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ScannerInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ScannerInputTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HarvestDatastructure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HarvestDatastructure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameClasses/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Action.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameClasses/Farm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Farm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Farmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameClasses/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameClasses/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameClasses/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/PlantType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/PlantType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameClasses/Test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,21 +41,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
   }
-}</component>
-  <component name="RunManager" selected="Application.Main">
+}]]></component>
+  <component name="RunManager" selected="JUnit.GameTest.GameShoppingToolsTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="HarvestDatastructure" />
@@ -61,23 +72,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameClasses.Test" />
+    <configuration name="ScannerInput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ScannerInput" />
       <module name="HarvestDatastructure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GameClasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.GameShoppingToolsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HarvestDatastructure" />
+      <option name="PACKAGE_NAME" value="GameClasses" />
+      <option name="MAIN_CLASS_NAME" value="GameClasses.GameTest" />
+      <option name="METHOD_NAME" value="GameShoppingToolsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScannerInputTest.inputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HarvestDatastructure" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ScannerInputTest" />
+      <option name="METHOD_NAME" value="inputTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest.GameShoppingToolsTest" />
+        <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Test" />
+        <item itemvalue="JUnit.ScannerInputTest.inputTest" />
+        <item itemvalue="Application.ScannerInput" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718140232498</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Written all methods, needs bugfixing">
+      <created>1718284469207</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718284469207</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,17 +173,35 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="Written all methods, needs bugfixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Written all methods, needs bugfixing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GameClasses/Test.java</url>
-          <line>27</line>
+          <url>file://$PROJECT_DIR$/src/Test.java</url>
+          <line>4</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GameClasses/Game.java</url>
+          <line>220</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GameClasses/Field.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="19" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HarvestDatastructure$GameTest_GameShoppingToolsTest.ic" NAME="GameTest.GameShoppingToolsTest Coverage Results" MODIFIED="1718294162021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

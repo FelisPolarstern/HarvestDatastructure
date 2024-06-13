@@ -51,7 +51,7 @@ public class Game {
         }
     }
 
-    private void buyTools() {
+    protected void buyTools() {
         Scanner scanner = new Scanner(System.in);
         boolean hasWateringCan = this.farm.hasWateringCan();
         boolean hasFertilizer = this.farm.hasFertilizer();
@@ -97,7 +97,7 @@ public class Game {
 
     }
 
-    private void buySeeds() {
+    protected void buySeeds() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ich verkaufe folgende Samen: " + PlantType.PEA.getName() + ", " + PlantType.APPLETREE.getName() + ", " + PlantType.CHERRYTREE.getName() + ", " +
                 PlantType.MACHE.getName() + ", " + PlantType.ONION.getName() + ", " + PlantType.POTATO.getName() + ", " + PlantType.SPINACH.getName() + ".");
@@ -128,7 +128,7 @@ public class Game {
         }
     }
 
-    private PlantType getPlantType(String input) {
+    protected PlantType getPlantType(String input) {
         switch (input) {
             case ("erbsen"):
                 return PlantType.PEA;
@@ -180,7 +180,7 @@ public class Game {
             System.out.println("Diese Pflanze kannst du noch nicht ernten.");
             return false;
         }
-        this.actionQueue.add(new Action("reap", x, y));
+        this.actionQueue.add(new Action("ernten", x, y));
         this.farm.reduceEnergy();
         //ToDo: Prüfen ob geerntet werden kann
         return true;
@@ -227,7 +227,9 @@ public class Game {
                 case "ernten":
                     this.farm.harvestPlant(currentAction.getX(), currentAction.getY());
             }
+            printField();
         }
+
         this.planningPlanting = 0;
         this.farm.growPlants();
         this.farm.resetFertilizePlants();

@@ -8,7 +8,7 @@ public class Action {
 
     protected Action(PlantType plantType){
         this.plantType = plantType;
-        this.actionType = "planting";
+        this.actionType = "anpflanzen";
     }
     protected Action(String actionType, int x, int y){
         this.actionType = actionType;

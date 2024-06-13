@@ -17,7 +17,7 @@ public class Field {
                     System.out.print("--");
                 }
                 else {
-                    System.out.print(plants[i][j].getPlantType().getIcon());
+                    System.out.print(plants[i][j].getPlantType().getIcon() + plants[i][j].getGrowthState() + "|");
                 }
             }
             System.out.println("]");
@@ -69,6 +69,9 @@ public class Field {
     protected void resetFertilized() {
         for (int i = 0; i < plants.length; i++) {
             for (int j = 0; j < plants[i].length; j++) {
+                if(this.plants[i][j] ==null){
+                    continue;
+                }
                 this.plants[i][j].deFertilizePlant();
             }
         }
@@ -77,32 +80,45 @@ public class Field {
     protected void resetWater(){
         for (int i = 0; i < plants.length; i++) {
             for (int j = 0; j < plants[i].length; j++) {
+                if(this.plants[i][j] ==null){
+                    continue;
+                }
                 this.plants[i][j].deWaterPlant();
             }
         }
     }
 
     protected void waterPlant(int x, int y){
-        this.plants[y][x].waterPlant();
+        if(this.plants[x][y] == null){
+            System.out.println("Hier wächst keine Pflanze");
+            return;
+        }
+        this.plants[x][y].waterPlant();
     }
     protected void fertilizePlant(int x, int y){
-        this.plants[y][x].fertilisePlant();
+        this.plants[x][y].fertilisePlant();
     }
 
     protected void growPlants(){
         for( int i = 0; i< this.plants.length; i++){
-            for (int j= 0; j< this.plants[j].length; j++){
+            for (int j= 0; j< this.plants[i].length; j++){
+                if(this.plants[i][j] == null){
+                    continue;
+                }
                 this.plants[i][j].grow(this.ecoValue);
             }
         }
     }
 
     protected boolean canPlantBeHarvetest(int x, int y){
-        return this.plants[y][x].canBeHarvested();
+        if(this.plants[x][y] == null){
+            return false;
+        }
+        return this.plants[x][y].canBeHarvested();
     }
 
     protected PlantType harvestPlant(int x, int y){
-        return this.plants[y][x].getPlantType();
+        return this.plants[x][y].getPlantType();
     }
 
 
