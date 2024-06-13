@@ -75,6 +75,7 @@ public class Main {
     }
 
     public void goToBed() {
+        System.out.println("Mit den letzten Sonnenstrahlen verlässt du deine Felder. Erschöpft fällst du in dein Bett und schließt die Augen.");
         /*
         Queue ausführen
         EcoValue setzen

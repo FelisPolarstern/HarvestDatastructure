@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2912a184-ad1d-4700-9122-6cce4cd5e3e6" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/GameClasses/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Farm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Farm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Farmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/PlantType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/PlantType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="2912a184-ad1d-4700-9122-6cce4cd5e3e6" name="Changes" comment="Cleaned up empty imports">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -40,20 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -95,6 +89,7 @@
       <workItem from="1718118696980" duration="39000" />
       <workItem from="1718133411977" duration="1000" />
       <workItem from="1718133441560" duration="17779000" />
+      <workItem from="1718225231358" duration="121000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1717794677525</created>
@@ -124,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718140232498</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cleaned up empty imports">
+      <created>1718225332714</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718225332714</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="Cleaned up empty imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up empty imports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

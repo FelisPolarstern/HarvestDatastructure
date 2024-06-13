@@ -42,6 +42,14 @@ public class Plant {
         this.watered = true;
     }
 
+    protected void deWaterPlant(){
+        this.watered = false;
+    }
+
+    protected void deFertilizePlant(){
+        this.fertilised = false;
+    }
+
     protected void fertilisePlant(){
         this.fertilised = true;
     }
@@ -52,5 +60,34 @@ public class Plant {
 
     protected String plantTypeToString(){
         return this.type.getName();
+    }
+
+    protected void grow(double echoValueField){
+        /*
+
+        Wachstum berechnen
+        wachstum: growthrate + echovalue feld, - 50% nicht gewässert, +50% für gedüngt
+        growthrate 25% -> in 4 * 6 Tagen ausgewachsen +75% echo value (75% von 25), -/+ von 25%
+         */
+        double growth = type.getGrowthRate();
+        /*add echoBonus*/
+        growth = (echoValueField/100) * growth;
+        /*reduce if not watered*/
+        if(!this.watered){
+            growth = growth /2;
+        }
+        if(this.fertilised){
+            growth = growth *2;
+        }
+
+        /*double number = 0.25;
+
+        // Prozentwert, den wir berechnen wollen (75%)
+        double percentage = 75.0;
+
+        // Berechnung des Prozentsatzes
+        double result = (percentage / 100) * number;
+        */
+
     }
 }

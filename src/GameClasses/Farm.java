@@ -71,18 +71,7 @@ public class Farm {
         }
     }
 
-    public boolean plantSeed(PlantType plantType){
-        if(!fields.get(0).hasSpace()){
-            System.out.println("Du hast keinen Platz mehr auf dem Feld.");
-            return false;
-        }
-        int seedCount = this.seeds.get(plantType) -1;
-        this.seeds.put(plantType, seedCount);
-        this.fields.get(0).plantSeed(plantType);
-        return true;
 
-        //ToDo die muss überarbeitet werden
-    }
 
     protected boolean hasEnoughSeeds(PlantType plantType){
         if(this.seeds.get(plantType) -1 <0){
@@ -120,6 +109,23 @@ public class Farm {
             seeds += seed.getKey().getName() + " " + seed.getValue();
         }
         return seeds;
+    }
+
+    public boolean plantSeed(PlantType plantType){
+        int seedCount = this.seeds.get(plantType) -1;
+        this.seeds.put(plantType, seedCount);
+        this.fields.get(0).plantSeed(plantType);
+        return true;
+
+        //ToDo die muss überarbeitet werden
+    }
+
+    public void waterPlant(int x, int y){
+        this.fields.get(0).waterPlant(x, y);
+    }
+
+    public void fertilizePLANT(int x, int y){
+        this.fields.get(0).fertilizePlant(x, y);
     }
 
 

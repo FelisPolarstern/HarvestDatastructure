@@ -1,5 +1,6 @@
 package GameClasses;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -8,12 +9,14 @@ public class Game {
     public Farm farm;
     private Queue<Action> actionQueue;
     private int planningPlanting;
+    private HashMap<PlantType, Integer> harvest;
 
 
     public Game(String farmerName, String farmName) {
         this.farm = new Farm(farmerName, farmName);
         this.actionQueue = new LinkedList<>();
         this.planningPlanting = 0;
+        this.harvest = new HashMap<>();
     }
 
     public String getFarmerName() {
@@ -204,6 +207,23 @@ public class Game {
 
     public String getSeeds(){
         return this.farm.getSeeds();
+    }
+
+    public void goToSleep(){
+        this.planningPlanting = 0;
+        /*
+        Wachstum berechnen
+        wachstum: growthrate + echovalue feld, - 50% nicht gewässert, +50% für gedüngt
+        growthrate 25% -> in 4 Tagen ausgewachsen +75% echo value (75% von 25), -/+ von 25%
+        falls growthState = 6 -> nicht mehr
+        alle pflanzen auf ungegossen setzen
+        alle pflanzen auf ungedüngt setzen
+         Queue ausführen
+        EcoValue setzen
+        Plantstatus setzen
+        Energie auffüllen
+        Pflanzen verkaufen
+         */
     }
 
 

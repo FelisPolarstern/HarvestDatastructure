@@ -4,6 +4,7 @@ public class Field {
     private Plant plants[][];
     private double ecoValue;
 
+
     protected Field(int height, int width){
         this.plants = new Plant[height][width];
     }
@@ -63,6 +64,29 @@ public class Field {
 
     public double getEcoValue(){
         return this.ecoValue;
+    }
+
+    public void resetFertilized() {
+        for (int i = 0; i < plants.length; i++) {
+            for (int j = 0; j < plants[i].length; j++) {
+                this.plants[i][j].deFertilizePlant();
+            }
+        }
+    }
+
+    public void deWater(){
+        for (int i = 0; i < plants.length; i++) {
+            for (int j = 0; j < plants[i].length; j++) {
+                this.plants[i][j].deWaterPlant();
+            }
+        }
+    }
+
+    public void waterPlant(int x, int y){
+        this.plants[y][x].waterPlant();
+    }
+    public void fertilizePlant(int x, int y){
+        this.plants[y][x].fertilisePlant();
     }
 
 
