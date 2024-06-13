@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2912a184-ad1d-4700-9122-6cce4cd5e3e6" name="Changes" comment="Written all methods, needs bugfixing">
-      <change afterPath="$PROJECT_DIR$/src/GameClasses/GameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScannerInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScannerInputTest.java" afterDir="false" />
+    <list default="true" id="2912a184-ad1d-4700-9122-6cce4cd5e3e6" name="Changes" comment="Fixed Bugs that occured on the first day playtrough">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HarvestDatastructure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HarvestDatastructure.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Action.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameClasses/Farm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Farm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameClasses/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Farmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameClasses/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameClasses/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/GameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameClasses/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameClasses/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameClasses/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +52,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -64,7 +61,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.GameTest.GameShoppingToolsTest">
+  <component name="RunManager" selected="JUnit.GameTest.gameHarvestFertiliseTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="HarvestDatastructure" />
@@ -72,9 +69,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScannerInput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ScannerInput" />
+    <configuration name="GameTest.GameHarvestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HarvestDatastructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GameClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GameClasses" />
+      <option name="MAIN_CLASS_NAME" value="GameClasses.GameTest" />
+      <option name="METHOD_NAME" value="GameHarvestTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,11 +95,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScannerInputTest.inputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.gameHarvestFertiliseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HarvestDatastructure" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ScannerInputTest" />
-      <option name="METHOD_NAME" value="inputTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GameClasses.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GameClasses" />
+      <option name="MAIN_CLASS_NAME" value="GameClasses.GameTest" />
+      <option name="METHOD_NAME" value="gameHarvestFertiliseTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest.gameHarvestFertiliseTest" />
+        <item itemvalue="JUnit.GameTest.GameHarvestTest" />
         <item itemvalue="JUnit.GameTest.GameShoppingToolsTest" />
         <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ScannerInputTest.inputTest" />
-        <item itemvalue="Application.ScannerInput" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718284469207</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed Bugs that occured on the first day playtrough">
+      <created>1718295467143</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718295467143</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +193,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="." />
     <MESSAGE value="Written all methods, needs bugfixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Written all methods, needs bugfixing" />
+    <MESSAGE value="Fixed Bugs that occured on the first day playtrough" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Bugs that occured on the first day playtrough" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -184,22 +204,16 @@
           <line>4</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GameClasses/Game.java</url>
-          <line>220</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GameClasses/Field.java</url>
-          <line>97</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="19" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HarvestDatastructure$GameTest_GameShoppingToolsTest.ic" NAME="GameTest.GameShoppingToolsTest Coverage Results" MODIFIED="1718294162021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

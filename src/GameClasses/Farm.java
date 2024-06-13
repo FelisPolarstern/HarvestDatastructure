@@ -166,7 +166,18 @@ public class Farm {
 
     protected void harvestPlant(int x, int y){
         PlantType harvest = this.fields.get(0).harvestPlant(x,y);
+        if(this.harvest.containsKey(harvest)){
+            int harvestQuanity = this.harvest.get(harvest);
+            this.harvest.put(harvest, harvest.getHarvest() + harvestQuanity);
+            return;
+        }
         this.harvest.put(harvest, harvest.getHarvest());
+    }
+
+    protected void useFertilizer(){
+        if(this.tools.contains(Tool.FERTILISER)){
+            this.tools.remove(Tool.FERTILISER);
+        }
     }
 
 }

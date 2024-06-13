@@ -36,7 +36,7 @@ public class Game {
             String buy = scanner.next();
             buy = buy.toLowerCase();
             switch (buy) {
-                case "werkzeug":
+                case "werkdümnzeug":
                     buyTools();
                     break;
                 case "pflanzensamen":
@@ -223,11 +223,11 @@ public class Game {
                     break;
                 case "düngen":
                     this.farm.fertilizePlant(currentAction.getX(), currentAction.getY());
+                    this.farm.useFertilizer();
                     break;
                 case "ernten":
                     this.farm.harvestPlant(currentAction.getX(), currentAction.getY());
             }
-            printField();
         }
 
         this.planningPlanting = 0;

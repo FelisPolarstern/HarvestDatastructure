@@ -70,16 +70,19 @@ public class Plant {
     }
 
     protected void grow(double echoValueField){
-        double growth = type.getGrowthRate();
-        /*add echoBonus*/
-        growth = (echoValueField/100) * growth;
+        double growthRate = type.getGrowthRate();
+        /*Adding EchoValue to GrowthRate*/
+        growthRate = growthRate + echoValueField;
+
         /*reduce if not watered*/
         if(!this.watered){
-            growth = growth /2;
+            growthRate = growthRate /2;
         }
         if(this.fertilised){
-            growth = growth *2;
+            growthRate = growthRate *2;
         }
+        this.growthState += growthRate;
+
         if(this.growthState >= 6){
             this.growthState = 6;
             this.canBeHarvested = true;

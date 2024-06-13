@@ -22,8 +22,6 @@ public class Main {
             input = scanner.next().toLowerCase();
         }
 
-        //Tagesablauf immer wieder regeln -> einkaufen, Aktionen ausführen, schlafen
-
     }
 
     private static Game gameStart() {
