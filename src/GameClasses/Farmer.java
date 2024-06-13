@@ -32,5 +32,9 @@ public class Farmer {
         return true;
     }
 
+    protected void reduceEnergy(){
+        this.energy -= 10;
+    }
+
 
 }

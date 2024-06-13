@@ -5,12 +5,14 @@ public class Plant {
     private double growthState;
     private boolean fertilised;
     private boolean watered;
+    private boolean canBeHarvested;
 
     protected Plant(PlantType plantType){
         this.type = plantType;
         this.growthState = 0;
         this.fertilised = false;
         this.watered = false;
+        this.canBeHarvested = false;
     }
 
     protected String matchString(String type){
@@ -63,12 +65,6 @@ public class Plant {
     }
 
     protected void grow(double echoValueField){
-        /*
-
-        Wachstum berechnen
-        wachstum: growthrate + echovalue feld, - 50% nicht gewässert, +50% für gedüngt
-        growthrate 25% -> in 4 * 6 Tagen ausgewachsen +75% echo value (75% von 25), -/+ von 25%
-         */
         double growth = type.getGrowthRate();
         /*add echoBonus*/
         growth = (echoValueField/100) * growth;
@@ -79,15 +75,16 @@ public class Plant {
         if(this.fertilised){
             growth = growth *2;
         }
+        if(this.growthState >= 6){
+            this.growthState = 6;
+            this.canBeHarvested = true;
+        }
+    }
 
-        /*double number = 0.25;
-
-        // Prozentwert, den wir berechnen wollen (75%)
-        double percentage = 75.0;
-
-        // Berechnung des Prozentsatzes
-        double result = (percentage / 100) * number;
-        */
-
+    protected boolean canBeHarvested(){
+        if(this.growthState == 6){
+            return true;
+        }
+        return false;
     }
 }

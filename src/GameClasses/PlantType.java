@@ -43,7 +43,7 @@ public enum PlantType {
         return cost;
     }
 
-    public double getSeelingPrice() {
+    public double getSellingPrice() {
         return seelingPrice;
     }
 

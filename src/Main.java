@@ -7,13 +7,21 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Game currentGame = gameStart();
-        final String ITALIC = "\033[3m";
-        final String RESET = "\033[0m";
-        System.out.println(ITALIC + "Die Sonne schiebt sich träge über die fernen Berge. Es klingelt und die gut gelaunte Händlerin steht an deinem Farmtor." + RESET);
-        currentGame = shopping(currentGame);
-        System.out.println(ITALIC + "Der Händler verschwindet in der Ferne. Zeit für einen Tag voller harter körperlicher Arbeit. Immerhin bist du an der frischen Luft." + RESET);
-        currentGame = action(currentGame);
+        Scanner scanner = new Scanner(System.in);
+        String input = " ";
+        while(!input.equals("ja")){
+            Game currentGame = gameStart();
+            final String ITALIC = "\033[3m";
+            final String RESET = "\033[0m";
+            System.out.println(ITALIC + "Die Sonne schiebt sich träge über die fernen Berge. Es klingelt und die gut gelaunte Händlerin steht an deinem Farmtor." + RESET);
+            currentGame = shopping(currentGame);
+            System.out.println(ITALIC + "Der Händler verschwindet in der Ferne. Zeit für einen Tag voller harter körperlicher Arbeit. Immerhin bist du an der frischen Luft." + RESET);
+            currentGame = action(currentGame);
+            currentGame = goToBed(currentGame);
+            System.out.println(ITALIC + "Möchtest du das Spiel beenden?");
+            input = scanner.next().toLowerCase();
+        }
+
         //Tagesablauf immer wieder regeln -> einkaufen, Aktionen ausführen, schlafen
 
     }
@@ -38,8 +46,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = " ";
         while (!input.equals("ausruhen")) {
-            System.out.println("Was möchtest du tun? Du kannst etwas anpflanzen, etwas ernten, Pflanzen gießen oder Pflanzen düngen. Oder möchtest du den Tag ausruhen?");
-            input = scanner.next();
+            System.out.println("Was möchtest du tun? Du kannst etwas anpflanzen, etwas ernten, Pflanzen gießen oder Pflanzen düngen. Oder möchtest du dich ausruhen?");
+            input = scanner.next().toLowerCase();
             int x = 0;
             int y = 0;
             switch (input){
@@ -74,15 +82,10 @@ public class Main {
         return currentGame;
     }
 
-    public void goToBed() {
+    public static Game goToBed(Game currentGame) {
         System.out.println("Mit den letzten Sonnenstrahlen verlässt du deine Felder. Erschöpft fällst du in dein Bett und schließt die Augen.");
-        /*
-        Queue ausführen
-        EcoValue setzen
-        Plantstatus setzen
-        Energie auffüllen
-        Pflanzen verkaufen
-         */
+        currentGame.goToSleep();
+        return currentGame;
     }
 
 

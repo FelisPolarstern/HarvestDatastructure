@@ -1,22 +1,17 @@
 package GameClasses;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 public class Game {
     public Farm farm;
     private Queue<Action> actionQueue;
     private int planningPlanting;
-    private HashMap<PlantType, Integer> harvest;
 
 
     public Game(String farmerName, String farmName) {
         this.farm = new Farm(farmerName, farmName);
         this.actionQueue = new LinkedList<>();
         this.planningPlanting = 0;
-        this.harvest = new HashMap<>();
     }
 
     public String getFarmerName() {
@@ -137,7 +132,7 @@ public class Game {
         switch (input) {
             case ("erbsen"):
                 return PlantType.PEA;
-            case ("kopfsalat"):
+            case ("feldsalat"):
                 return PlantType.MACHE;
             case ("kirschbaum"):
                 return PlantType.CHERRYTREE;
@@ -173,6 +168,7 @@ public class Game {
         this.farm.reduceSeeds(plantType);
         this.actionQueue.add(new Action(plantType));
         this.planningPlanting ++;
+        this.farm.reduceEnergy();
         return true;
     }
 
@@ -180,7 +176,12 @@ public class Game {
         if(!this.farm.hasEnergy()){
             return false;
         }
+        if(!this.farm.canBeHarvested(x,y)){
+            System.out.println("Diese Pflanze kannst du noch nicht ernten.");
+            return false;
+        }
         this.actionQueue.add(new Action("reap", x, y));
+        this.farm.reduceEnergy();
         //ToDo: Prüfen ob geerntet werden kann
         return true;
     }
@@ -198,6 +199,7 @@ public class Game {
 
         mendType = mendType.toLowerCase();
         this.actionQueue.add(new Action(mendType, x, y));
+        this.farm.reduceEnergy();
         return true;
     }
 
@@ -210,21 +212,31 @@ public class Game {
     }
 
     public void goToSleep(){
+        while(!this.actionQueue.isEmpty()){
+            Action currentAction = actionQueue.poll();
+            switch (currentAction.getActionType()) {
+                case "anpflanzen":
+                    this.farm.plantSeed(currentAction.plantType);
+                    break;
+                case "gießen":
+                    this.farm.waterPlant(currentAction.getX(), currentAction.getY());
+                    break;
+                case "düngen":
+                    this.farm.fertilizePlant(currentAction.getX(), currentAction.getY());
+                    break;
+                case "ernten":
+                    this.farm.harvestPlant(currentAction.getX(), currentAction.getY());
+            }
+        }
         this.planningPlanting = 0;
-        /*
-        Wachstum berechnen
-        wachstum: growthrate + echovalue feld, - 50% nicht gewässert, +50% für gedüngt
-        growthrate 25% -> in 4 Tagen ausgewachsen +75% echo value (75% von 25), -/+ von 25%
-        falls growthState = 6 -> nicht mehr
-        alle pflanzen auf ungegossen setzen
-        alle pflanzen auf ungedüngt setzen
-         Queue ausführen
-        EcoValue setzen
-        Plantstatus setzen
-        Energie auffüllen
-        Pflanzen verkaufen
-         */
+        this.farm.growPlants();
+        this.farm.resetFertilizePlants();
+        this.farm.resetWaterPlants();
+        this.farm.resetEnergy();
+        this.farm.sellHarvest();
     }
+
+
 
 
 

@@ -11,8 +11,9 @@ public class Farm {
     private List<Field> fields;
     double gold;
     private ArrayList<Tool> tools;
-
     private HashMap<PlantType, Integer> seeds;
+    private HashMap<PlantType, Integer> harvest;
+
 
     protected Farm(String farmer, String name){
         this.farmer = new Farmer(farmer);
@@ -22,6 +23,7 @@ public class Farm {
         this.gold = 200;
         this.tools = new ArrayList<>();
         this.seeds = new HashMap<>();
+        this.harvest = new HashMap<>();
     }
 
     protected String getName(){
@@ -111,26 +113,60 @@ public class Farm {
         return seeds;
     }
 
-    public boolean plantSeed(PlantType plantType){
+    protected boolean plantSeed(PlantType plantType){
         int seedCount = this.seeds.get(plantType) -1;
         this.seeds.put(plantType, seedCount);
         this.fields.get(0).plantSeed(plantType);
         return true;
-
-        //ToDo die muss überarbeitet werden
     }
 
-    public void waterPlant(int x, int y){
+    protected void waterPlant(int x, int y){
         this.fields.get(0).waterPlant(x, y);
     }
 
-    public void fertilizePLANT(int x, int y){
+    protected void fertilizePlant(int x, int y){
         this.fields.get(0).fertilizePlant(x, y);
     }
 
+    protected void resetWaterPlants(){
+        this.fields.get(0).resetWater();
+    }
 
+    protected void resetFertilizePlants(){
+        this.fields.get(0).resetFertilized();
+    }
 
+    protected void growPlants(){
+        this.fields.get(0).growPlants();
+    }
 
+    protected void resetEnergy(){
+        this.farmer.resetEnergy();
+    }
 
+    protected void sellHarvest() {
+        if(this.harvest.isEmpty()){
+            return;
+        }
+        for (Map.Entry<PlantType, Integer> entry : this.harvest.entrySet()) {
+            double price = entry.getKey().getSellingPrice();
+            price *= entry.getValue();
+            this.gold += price;
+        }
+        this.harvest.clear();
+    }
+
+    protected void reduceEnergy(){
+        this.farmer.reduceEnergy();
+    }
+
+    protected boolean canBeHarvested(int x, int y){
+        return this.fields.get(0).canPlantBeHarvetest(x, y);
+    }
+
+    protected void harvestPlant(int x, int y){
+        PlantType harvest = this.fields.get(0).harvestPlant(x,y);
+        this.harvest.put(harvest, harvest.getHarvest());
+    }
 
 }

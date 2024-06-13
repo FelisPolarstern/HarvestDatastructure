@@ -62,11 +62,11 @@ public class Field {
         return space;
     }
 
-    public double getEcoValue(){
+    protected double getEcoValue(){
         return this.ecoValue;
     }
 
-    public void resetFertilized() {
+    protected void resetFertilized() {
         for (int i = 0; i < plants.length; i++) {
             for (int j = 0; j < plants[i].length; j++) {
                 this.plants[i][j].deFertilizePlant();
@@ -74,7 +74,7 @@ public class Field {
         }
     }
 
-    public void deWater(){
+    protected void resetWater(){
         for (int i = 0; i < plants.length; i++) {
             for (int j = 0; j < plants[i].length; j++) {
                 this.plants[i][j].deWaterPlant();
@@ -82,12 +82,32 @@ public class Field {
         }
     }
 
-    public void waterPlant(int x, int y){
+    protected void waterPlant(int x, int y){
         this.plants[y][x].waterPlant();
     }
-    public void fertilizePlant(int x, int y){
+    protected void fertilizePlant(int x, int y){
         this.plants[y][x].fertilisePlant();
     }
+
+    protected void growPlants(){
+        for( int i = 0; i< this.plants.length; i++){
+            for (int j= 0; j< this.plants[j].length; j++){
+                this.plants[i][j].grow(this.ecoValue);
+            }
+        }
+    }
+
+    protected boolean canPlantBeHarvetest(int x, int y){
+        return this.plants[y][x].canBeHarvested();
+    }
+
+    protected PlantType harvestPlant(int x, int y){
+        return this.plants[y][x].getPlantType();
+    }
+
+
+
+
 
 
 }
