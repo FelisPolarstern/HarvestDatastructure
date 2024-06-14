@@ -124,7 +124,7 @@ public class Game {
         System.out.println("Möchtest du weitere Saat kaufen?");
         input = scanner.next();
         if(input.equalsIgnoreCase("ja")){
-            shopping();
+            buySeeds();
         }
     }
 
