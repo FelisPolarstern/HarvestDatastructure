@@ -36,7 +36,7 @@ public class Game {
             String buy = scanner.next();
             buy = buy.toLowerCase();
             switch (buy) {
-                case "werkdümnzeug":
+                case "werkzeug":
                     buyTools();
                     break;
                 case "pflanzensamen":
@@ -124,7 +124,7 @@ public class Game {
         System.out.println("Möchtest du weitere Saat kaufen?");
         input = scanner.next();
         if(input.equalsIgnoreCase("ja")){
-            shopping();
+            buySeeds();
         }
     }
 
